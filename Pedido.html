@@ -59,60 +59,116 @@
 
         <!-- Datos de Detalle (Detail) -->
         <h2>Datos de Detalle</h2>
-        <div id="detalle">
-            <!-- Se repiten 4 filas -->
-            <div class="detail-row">
-                <h3>Ítem 1</h3>
-                <label for="lineaNro1">Línea Nro:</label>
-                <input type="text" id="lineaNro1" name="lineaNro1">
-
-                <label for="diametro1">Diámetro:</label>
-                <input type="text" id="diametro1" name="diametro1">
-
-                <label for="schedule1">Schedule:</label>
-                <input type="text" id="schedule1" name="schedule1">
-
-                <label for="espesor1">Espesor:</label>
-                <input type="text" id="espesor1" name="espesor1">
-
-                <label for="juntaNro1">Junta Nro:</label>
-                <input type="text" id="juntaNro1" name="juntaNro1">
-
-                <label for="soldadores1">Soldadores:</label>
-                <input type="text" id="soldadores1_1" placeholder="Soldador 1">
-                <input type="text" id="soldadores1_2" placeholder="Soldador 2">
-                <input type="text" id="soldadores1_3" placeholder="Soldador 3">
-                <input type="text" id="soldadores1_4" placeholder="Soldador 4">
-
-                <label for="codigoConstruccion1">Código Construcción:</label>
-                <input type="text" id="codigoConstruccion1" name="codigoConstruccion1">
-
-                <label for="obra1">Obra:</label>
-                <input type="text" id="obra1" name="obra1">
-
-                <label for="identificacionAdicional1">Identificación Adicional:</label>
-                <input type="text" id="identificacionAdicional1" name="identificacionAdicional1">
-
-                <label for="ot1">OT:</label>
-                <input type="text" id="ot1" name="ot1">
-
-                <label for="observaciones1">Observaciones:</label>
-                <input type="text" id="observaciones1" name="observaciones1">
-
-                <label for="responsableCalidad1">Responsable Calidad:</label>
-                <input type="text" id="responsableCalidad1" name="responsableCalidad1">
-
-                <label for="fechaResponsableCalidad1">Fecha Responsable Calidad:</label>
-                <input type="date" id="fechaResponsableCalidad1" name="fechaResponsableCalidad1">
-
-                <label for="responsableEmpresa1">Responsable Empresa:</label>
-                <input type="text" id="responsableEmpresa1" name="responsableEmpresa1">
-
-                <label for="fechaResponsableEmpresa1">Fecha Responsable Empresa:</label>
-                <input type="date" id="fechaResponsableEmpresa1" name="fechaResponsableEmpresa1">
-            </div>
-            <!-- Repetir para Ítem 2, 3 y 4 -->
-        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Línea Nro</th>
+                    <th>Diámetro</th>
+                    <th>Schedule</th>
+                    <th>Espesor</th>
+                    <th>Junta Nro</th>
+                    <th>Soldador 1</th>
+                    <th>Soldador 2</th>
+                    <th>Soldador 3</th>
+                    <th>Soldador 4</th>
+                    <th>Código Construcción</th>
+                    <th>Obra</th>
+                    <th>Identificación Adicional</th>
+                    <th>OT</th>
+                    <th>Observaciones</th>
+                    <th>Responsable Calidad</th>
+                    <th>Fecha Responsable Calidad</th>
+                    <th>Responsable Empresa</th>
+                    <th>Fecha Responsable Empresa</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Fila 1 -->
+                <tr>
+                    <td><input type="text" name="lineaNro1"></td>
+                    <td><input type="text" name="diametro1"></td>
+                    <td><input type="text" name="schedule1"></td>
+                    <td><input type="text" name="espesor1"></td>
+                    <td><input type="text" name="juntaNro1"></td>
+                    <td><input type="text" name="soldador1_1"></td>
+                    <td><input type="text" name="soldador1_2"></td>
+                    <td><input type="text" name="soldador1_3"></td>
+                    <td><input type="text" name="soldador1_4"></td>
+                    <td><input type="text" name="codigoConstruccion1"></td>
+                    <td><input type="text" name="obra1"></td>
+                    <td><input type="text" name="identificacionAdicional1"></td>
+                    <td><input type="text" name="ot1"></td>
+                    <td><input type="text" name="observaciones1"></td>
+                    <td><input type="text" name="responsableCalidad1"></td>
+                    <td><input type="date" name="fechaResponsableCalidad1"></td>
+                    <td><input type="text" name="responsableEmpresa1"></td>
+                    <td><input type="date" name="fechaResponsableEmpresa1"></td>
+                </tr>
+                <!-- Fila 2 -->
+                <tr>
+                    <td><input type="text" name="lineaNro2"></td>
+                    <td><input type="text" name="diametro2"></td>
+                    <td><input type="text" name="schedule2"></td>
+                    <td><input type="text" name="espesor2"></td>
+                    <td><input type="text" name="juntaNro2"></td>
+                    <td><input type="text" name="soldador2_1"></td>
+                    <td><input type="text" name="soldador2_2"></td>
+                    <td><input type="text" name="soldador2_3"></td>
+                    <td><input type="text" name="soldador2_4"></td>
+                    <td><input type="text" name="codigoConstruccion2"></td>
+                    <td><input type="text" name="obra2"></td>
+                    <td><input type="text" name="identificacionAdicional2"></td>
+                    <td><input type="text" name="ot2"></td>
+                    <td><input type="text" name="observaciones2"></td>
+                    <td><input type="text" name="responsableCalidad2"></td>
+                    <td><input type="date" name="fechaResponsableCalidad2"></td>
+                    <td><input type="text" name="responsableEmpresa2"></td>
+                    <td><input type="date" name="fechaResponsableEmpresa2"></td>
+                </tr>
+                <!-- Fila 3 -->
+                <tr>
+                    <td><input type="text" name="lineaNro3"></td>
+                    <td><input type="text" name="diametro3"></td>
+                    <td><input type="text" name="schedule3"></td>
+                    <td><input type="text" name="espesor3"></td>
+                    <td><input type="text" name="juntaNro3"></td>
+                    <td><input type="text" name="soldador3_1"></td>
+                    <td><input type="text" name="soldador3_2"></td>
+                    <td><input type="text" name="soldador3_3"></td>
+                    <td><input type="text" name="soldador3_4"></td>
+                    <td><input type="text" name="codigoConstruccion3"></td>
+                    <td><input type="text" name="obra3"></td>
+                    <td><input type="text" name="identificacionAdicional3"></td>
+                    <td><input type="text" name="ot3"></td>
+                    <td><input type="text" name="observaciones3"></td>
+                    <td><input type="text" name="responsableCalidad3"></td>
+                    <td><input type="date" name="fechaResponsableCalidad3"></td>
+                    <td><input type="text" name="responsableEmpresa3"></td>
+                    <td><input type="date" name="fechaResponsableEmpresa3"></td>
+                </tr>
+                <!-- Fila 4 -->
+                <tr>
+                    <td><input type="text" name="lineaNro4"></td>
+                    <td><input type="text" name="diametro4"></td>
+                    <td><input type="text" name="schedule4"></td>
+                    <td><input type="text" name="espesor4"></td>
+                    <td><input type="text" name="juntaNro4"></td>
+                    <td><input type="text" name="soldador4_1"></td>
+                    <td><input type="text" name="soldador4_2"></td>
+                    <td><input type="text" name="soldador4_3"></td>
+                    <td><input type="text" name="soldador4_4"></td>
+                    <td><input type="text" name="codigoConstruccion4"></td>
+                    <td><input type="text" name="obra4"></td>
+                    <td><input type="text" name="identificacionAdicional4"></td>
+                    <td><input type="text" name="ot4"></td>
+                    <td><input type="text" name="observaciones4"></td>
+                    <td><input type="text" name="responsableCalidad4"></td>
+                    <td><input type="date" name="fechaResponsableCalidad4"></td>
+                    <td><input type="text" name="responsableEmpresa4"></td>
+                    <td><input type="date" name="fechaResponsableEmpresa4"></td>
+                </tr>
+            </tbody>
+        </table>
 
         <button type="submit">Guardar Pedido</button>
     </form>

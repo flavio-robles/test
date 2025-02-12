@@ -28,7 +28,7 @@ input[type="email"],
 input[type="date"],
 input[type="number"],
 select {
-    width: 100%;
+    width: 50px; /* Ancho máximo de 50px */
     padding: 8px;
     margin-bottom: 12px;
     border: 1px solid #ccc;
@@ -52,15 +52,27 @@ button:hover {
     background-color: #218838;
 }
 
-.detail-row {
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: #f9f9f9;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
-.detail-row h3 {
-    margin-top: 0;
-    color: #555;
+table th,
+table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+}
+
+table td input {
+    width: 50px; /* Ancho máximo de 50px */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
