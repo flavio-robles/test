@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargar Pedido END</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Cargar Pedido END</h1>
+    <form>
+        <!-- Datos de Cabecera (Master) -->
+        <h2>Datos de Cabecera</h2>
+        <label for="cliente">Cliente:</label>
+        <select id="cliente" name="cliente">
+            <option value="Capex">Capex</option>
+            <option value="Pan American Energy">Pan American Energy</option>
+            <option value="Pluspetrol">Pluspetrol</option>
+            <option value="Tecpetrol">Tecpetrol</option>
+            <option value="YPF">YPF</option>
+        </select>
+
+        <label for="solicitante">Solicitante:</label>
+        <input type="text" id="solicitante" name="solicitante" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="formularioCliente">Formulario Cliente:</label>
+        <input type="text" id="formularioCliente" name="formularioCliente" required>
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" required>
+
+        <label for="revision">Revisión:</label>
+        <input type="number" id="revision" name="revision" required>
+
+        <label for="proyecto">Proyecto:</label>
+        <select id="proyecto" name="proyecto">
+            <option value="Proyecto Vaca Muerta Sur">Proyecto Vaca Muerta Sur</option>
+            <option value="Gasoducto Tratayén">Gasoducto Tratayén</option>
+            <option value="Proyecto Fortín de Piedra">Proyecto Fortín de Piedra</option>
+            <option value="Proyecto Lindero Atravesado">Proyecto Lindero Atravesado</option>
+            <option value="Gasoducto Sierras Blancas">Gasoducto Sierras Blancas</option>
+        </select>
+
+        <label for="tipoEND">Tipo END:</label>
+        <select id="tipoEND" name="tipoEND">
+            <option value="RI">RI</option>
+            <option value="LP">LP</option>
+            <option value="PM">PM</option>
+        </select>
+
+        <label for="activo">Activo:</label>
+        <select id="activo" name="activo">
+            <option value="Si">Sí</option>
+            <option value="No">No</option>
+        </select>
+
+        <!-- Datos de Detalle (Detail) -->
+        <h2>Datos de Detalle</h2>
+        <div id="detalle">
+            <!-- Se repiten 4 filas -->
+            <div class="detail-row">
+                <h3>Ítem 1</h3>
+                <label for="lineaNro1">Línea Nro:</label>
+                <input type="text" id="lineaNro1" name="lineaNro1">
+
+                <label for="diametro1">Diámetro:</label>
+                <input type="text" id="diametro1" name="diametro1">
+
+                <label for="schedule1">Schedule:</label>
+                <input type="text" id="schedule1" name="schedule1">
+
+                <label for="espesor1">Espesor:</label>
+                <input type="text" id="espesor1" name="espesor1">
+
+                <label for="juntaNro1">Junta Nro:</label>
+                <input type="text" id="juntaNro1" name="juntaNro1">
+
+                <label for="soldadores1">Soldadores:</label>
+                <input type="text" id="soldadores1_1" placeholder="Soldador 1">
+                <input type="text" id="soldadores1_2" placeholder="Soldador 2">
+                <input type="text" id="soldadores1_3" placeholder="Soldador 3">
+                <input type="text" id="soldadores1_4" placeholder="Soldador 4">
+
+                <label for="codigoConstruccion1">Código Construcción:</label>
+                <input type="text" id="codigoConstruccion1" name="codigoConstruccion1">
+
+                <label for="obra1">Obra:</label>
+                <input type="text" id="obra1" name="obra1">
+
+                <label for="identificacionAdicional1">Identificación Adicional:</label>
+                <input type="text" id="identificacionAdicional1" name="identificacionAdicional1">
+
+                <label for="ot1">OT:</label>
+                <input type="text" id="ot1" name="ot1">
+
+                <label for="observaciones1">Observaciones:</label>
+                <input type="text" id="observaciones1" name="observaciones1">
+
+                <label for="responsableCalidad1">Responsable Calidad:</label>
+                <input type="text" id="responsableCalidad1" name="responsableCalidad1">
+
+                <label for="fechaResponsableCalidad1">Fecha Responsable Calidad:</label>
+                <input type="date" id="fechaResponsableCalidad1" name="fechaResponsableCalidad1">
+
+                <label for="responsableEmpresa1">Responsable Empresa:</label>
+                <input type="text" id="responsableEmpresa1" name="responsableEmpresa1">
+
+                <label for="fechaResponsableEmpresa1">Fecha Responsable Empresa:</label>
+                <input type="date" id="fechaResponsableEmpresa1" name="fechaResponsableEmpresa1">
+            </div>
+            <!-- Repetir para Ítem 2, 3 y 4 -->
+        </div>
+
+        <button type="submit">Guardar Pedido</button>
+    </form>
+</body>
+</html>
