@@ -73,32 +73,39 @@
 				<script>
 					for (let i = 0; i < 4; i++) {
 						document.write(`
-								<tr>
-									<td><input type="text"></td>
-									<td><input type="text"></td>
-									<td><input type="text"></td>
-									<td><input type="text"></td>
-									<td><input type="text"></td>
-									<td class="soldadores">
-										<input type="text"><input type="text"><input type="text"><input type="text">
-									</td>
-									<td><input type="text"></td>
-									<td><input type="text"></td>
-									<td><input type="text"></td>
-									<td><input type="text"></td>
-									<td><input type="text"></td>
-									<td><input type="text"></td>
-									<td><input type="date"></td>
-									<td><input type="text"></td>
-									<td><input type="date"></td>
-								</tr>
-							`);
+												<tr>
+													<td><input type="text"></td>
+													<td><input type="text"></td>
+													<td><input type="text"></td>
+													<td><input type="text"></td>
+													<td><input type="text"></td>
+													<td class="soldadores">
+														<input type="text"><input type="text"><input type="text"><input type="text">
+													</td>
+													<td><input type="text"></td>
+													<td><input type="text"></td>
+													<td><input type="text"></td>
+													<td><input type="text"></td>
+													<td><input type="text"></td>
+													<td><input type="text"></td>
+													<td><input type="date"></td>
+													<td><input type="text"></td>
+													<td><input type="date"></td>
+												</tr>
+											`);
 					}
 				</script>
 			</table>
 		</fieldset>
 
-		<button style="max-width: fit-content;">Guardar</button>
+		<button type="button" onclick="redirigir()" style="max-width: fit-content;">Guardar</button>
+
+		<script>
+			function redirigir() {
+				window.location.href = "ListarPedido.html";
+			}
+		</script>
+
 	</form>
 </body>
 </html>
