@@ -1,173 +1,104 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cargar Pedido END</title>
-    <link rel="stylesheet" href="styles.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cargar Pedido END</title>
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Cargar Pedido END</h1>
-    <form>
-        <!-- Datos de Cabecera (Master) -->
-        <h2>Datos de Cabecera</h2>
-        <label for="cliente">Cliente:</label>
-        <select id="cliente" name="cliente">
-            <option value="Capex">Capex</option>
-            <option value="Pan American Energy">Pan American Energy</option>
-            <option value="Pluspetrol">Pluspetrol</option>
-            <option value="Tecpetrol">Tecpetrol</option>
-            <option value="YPF">YPF</option>
-        </select>
+	<h1>Cargar Pedido END</h1>
+	<form>
+		<fieldset>
+			<legend>Datos de Cabecera</legend>
+			<label>Cliente:</label>
+			<select>
+				<option>Capex</option>
+				<option>Pan American Energy</option>
+				<option>Pluspetrol</option>
+				<option>Tecpetrol</option>
+				<option>YPF</option>
+			</select>
+			<label>Solicitante:</label>
+			<input type="text">
+			<label>Email:</label>
+			<input type="email">
+			<label>Formulario Cliente:</label>
+			<input type="text">
+			<label>Fecha:</label>
+			<input type="date">
+			<label>Revisión:</label>
+			<input type="number">
+			<label>Proyecto:</label>
+			<select>
+				<option>Gasoducto Sierras Blancas</option>
+				<option>Gasoducto Tratayén</option>
+				<option>Proyecto Fortín de Piedra</option>
+				<option>Proyecto Lindero Atravesado</option>
+				<option>Proyecto Vaca Muerta Sur</option>
+			</select>
+			<label>Tipo END:</label>
+			<select>
+				<option>LP</option>
+				<option>PM</option>
+				<option>RI</option>
+			</select>
+			<label>Activo:</label>
+			<select>
+				<option>Sí</option>
+				<option>No</option>
+			</select>
+		</fieldset>
 
-        <label for="solicitante">Solicitante:</label>
-        <input type="text" id="solicitante" name="solicitante" required>
+		<fieldset>
+			<legend>Detalles del Pedido</legend>
+			<table>
+				<tr>
+					<th>LineaNro</th>
+					<th>Diametro</th>
+					<th>Schedule</th>
+					<th>Espesor</th>
+					<th>JuntaNro</th>
+					<th>Soldadores</th>
+					<th>Cod. Construcción</th>
+					<th>Obra</th>
+					<th>Identificación Adic.</th>
+					<th>OT</th>
+					<th>Observaciones</th>
+					<th>Resp. Calidad</th>
+					<th>Fecha Resp. Calidad</th>
+					<th>Resp. Empresa</th>
+					<th>Fecha Resp. Empresa</th>
+				</tr>
+				<script>
+					for (let i = 0; i < 4; i++) {
+						document.write(`
+								<tr>
+									<td><input type="text"></td>
+									<td><input type="text"></td>
+									<td><input type="text"></td>
+									<td><input type="text"></td>
+									<td><input type="text"></td>
+									<td class="soldadores">
+										<input type="text"><input type="text"><input type="text"><input type="text">
+									</td>
+									<td><input type="text"></td>
+									<td><input type="text"></td>
+									<td><input type="text"></td>
+									<td><input type="text"></td>
+									<td><input type="text"></td>
+									<td><input type="text"></td>
+									<td><input type="date"></td>
+									<td><input type="text"></td>
+									<td><input type="date"></td>
+								</tr>
+							`);
+					}
+				</script>
+			</table>
+		</fieldset>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="formularioCliente">Formulario Cliente:</label>
-        <input type="text" id="formularioCliente" name="formularioCliente" required>
-
-        <label for="fecha">Fecha:</label>
-        <input type="date" id="fecha" name="fecha" required>
-
-        <label for="revision">Revisión:</label>
-        <input type="number" id="revision" name="revision" required>
-
-        <label for="proyecto">Proyecto:</label>
-        <select id="proyecto" name="proyecto">
-            <option value="Proyecto Vaca Muerta Sur">Proyecto Vaca Muerta Sur</option>
-            <option value="Gasoducto Tratayén">Gasoducto Tratayén</option>
-            <option value="Proyecto Fortín de Piedra">Proyecto Fortín de Piedra</option>
-            <option value="Proyecto Lindero Atravesado">Proyecto Lindero Atravesado</option>
-            <option value="Gasoducto Sierras Blancas">Gasoducto Sierras Blancas</option>
-        </select>
-
-        <label for="tipoEND">Tipo END:</label>
-        <select id="tipoEND" name="tipoEND">
-            <option value="RI">RI</option>
-            <option value="LP">LP</option>
-            <option value="PM">PM</option>
-        </select>
-
-        <label for="activo">Activo:</label>
-        <select id="activo" name="activo">
-            <option value="Si">Sí</option>
-            <option value="No">No</option>
-        </select>
-
-        <!-- Datos de Detalle (Detail) -->
-        <h2>Datos de Detalle</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Línea Nro</th>
-                    <th>Diámetro</th>
-                    <th>Schedule</th>
-                    <th>Espesor</th>
-                    <th>Junta Nro</th>
-                    <th colspan="4">Soldadores</th>
-                    <th>Código Construcción</th>
-                    <th>Obra</th>
-                    <th>Identificación Adicional</th>
-                    <th>OT</th>
-                    <th>Observaciones</th>
-                    <th>Responsable Calidad</th>
-                    <th>Fecha Responsable Calidad</th>
-                    <th>Responsable Empresa</th>
-                    <th>Fecha Responsable Empresa</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Fila 1 -->
-                <tr>
-                    <td><input type="text" name="lineaNro1"></td>
-                    <td><input type="text" name="diametro1"></td>
-                    <td><input type="text" name="schedule1"></td>
-                    <td><input type="text" name="espesor1"></td>
-                    <td><input type="text" name="juntaNro1"></td>
-                    <td><input type="text" name="soldador1_1"></td>
-                    <td><input type="text" name="soldador1_2"></td>
-                    <td><input type="text" name="soldador1_3"></td>
-                    <td><input type="text" name="soldador1_4"></td>
-                    <td><input type="text" name="codigoConstruccion1"></td>
-                    <td><input type="text" name="obra1"></td>
-                    <td><input type="text" name="identificacionAdicional1"></td>
-                    <td><input type="text" name="ot1"></td>
-                    <td><input type="text" name="observaciones1"></td>
-                    <td><input type="text" name="responsableCalidad1"></td>
-                    <td><input type="date" name="fechaResponsableCalidad1"></td>
-                    <td><input type="text" name="responsableEmpresa1"></td>
-                    <td><input type="date" name="fechaResponsableEmpresa1"></td>
-                </tr>
-                <!-- Fila 2 -->
-                <tr>
-                    <td><input type="text" name="lineaNro2"></td>
-                    <td><input type="text" name="diametro2"></td>
-                    <td><input type="text" name="schedule2"></td>
-                    <td><input type="text" name="espesor2"></td>
-                    <td><input type="text" name="juntaNro2"></td>
-                    <td><input type="text" name="soldador2_1"></td>
-                    <td><input type="text" name="soldador2_2"></td>
-                    <td><input type="text" name="soldador2_3"></td>
-                    <td><input type="text" name="soldador2_4"></td>
-                    <td><input type="text" name="codigoConstruccion2"></td>
-                    <td><input type="text" name="obra2"></td>
-                    <td><input type="text" name="identificacionAdicional2"></td>
-                    <td><input type="text" name="ot2"></td>
-                    <td><input type="text" name="observaciones2"></td>
-                    <td><input type="text" name="responsableCalidad2"></td>
-                    <td><input type="date" name="fechaResponsableCalidad2"></td>
-                    <td><input type="text" name="responsableEmpresa2"></td>
-                    <td><input type="date" name="fechaResponsableEmpresa2"></td>
-                </tr>
-                <!-- Fila 3 -->
-                <tr>
-                    <td><input type="text" name="lineaNro3"></td>
-                    <td><input type="text" name="diametro3"></td>
-                    <td><input type="text" name="schedule3"></td>
-                    <td><input type="text" name="espesor3"></td>
-                    <td><input type="text" name="juntaNro3"></td>
-                    <td><input type="text" name="soldador3_1"></td>
-                    <td><input type="text" name="soldador3_2"></td>
-                    <td><input type="text" name="soldador3_3"></td>
-                    <td><input type="text" name="soldador3_4"></td>
-                    <td><input type="text" name="codigoConstruccion3"></td>
-                    <td><input type="text" name="obra3"></td>
-                    <td><input type="text" name="identificacionAdicional3"></td>
-                    <td><input type="text" name="ot3"></td>
-                    <td><input type="text" name="observaciones3"></td>
-                    <td><input type="text" name="responsableCalidad3"></td>
-                    <td><input type="date" name="fechaResponsableCalidad3"></td>
-                    <td><input type="text" name="responsableEmpresa3"></td>
-                    <td><input type="date" name="fechaResponsableEmpresa3"></td>
-                </tr>
-                <!-- Fila 4 -->
-                <tr>
-                    <td><input type="text" name="lineaNro4"></td>
-                    <td><input type="text" name="diametro4"></td>
-                    <td><input type="text" name="schedule4"></td>
-                    <td><input type="text" name="espesor4"></td>
-                    <td><input type="text" name="juntaNro4"></td>
-                    <td><input type="text" name="soldador4_1"></td>
-                    <td><input type="text" name="soldador4_2"></td>
-                    <td><input type="text" name="soldador4_3"></td>
-                    <td><input type="text" name="soldador4_4"></td>
-                    <td><input type="text" name="codigoConstruccion4"></td>
-                    <td><input type="text" name="obra4"></td>
-                    <td><input type="text" name="identificacionAdicional4"></td>
-                    <td><input type="text" name="ot4"></td>
-                    <td><input type="text" name="observaciones4"></td>
-                    <td><input type="text" name="responsableCalidad4"></td>
-                    <td><input type="date" name="fechaResponsableCalidad4"></td>
-                    <td><input type="text" name="responsableEmpresa4"></td>
-                    <td><input type="date" name="fechaResponsableEmpresa4"></td>
-                </tr>
-            </tbody>
-        </table>
-
-        <button type="submit">Guardar Pedido</button>
-    </form>
+		<button style="max-width: fit-content;">Guardar</button>
+	</form>
 </body>
 </html>

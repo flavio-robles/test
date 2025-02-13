@@ -1,78 +1,121 @@
-/* styles.css */
+/* Reset básico para la página */
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #f4f4f4;
-    color: #333;
+	font-family: Arial, sans-serif;
+	margin: 20px;
+	padding: 0;
+	background-color: #f9f9f9;
 }
 
-h1 {
-    color: #444;
+/* Contenedor principal */
+.container {
+	max-width: 800px;
+	margin: auto;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Estilos generales para formularios */
 form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
 }
 
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
+/* Ajuste de ancho para todos los inputs y selects */
+input, select {
+	max-width: 150px;
+	width: 100%;
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="date"],
-input[type="number"],
-select {
-    width: 50px; /* Ancho máximo de 50px */
-    padding: 8px;
-    margin-bottom: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-input[type="checkbox"] {
-    margin-right: 10px;
-}
-
+/* Botones: el ancho se ajusta al texto */
 button {
-    background-color: #28a745;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+	padding: 8px 12px;
+	border: none;
+	border-radius: 3px;
+	background-color: #007bff;
+	color: white;
+	cursor: pointer;
+	max-width: fit-content; /* El botón no se expande más de su contenido */
+	white-space: nowrap; /* Evita que el texto del botón haga saltos de línea */
+	margin-right: 5px; /* Espacio entre botones */
 }
 
-button:hover {
-    background-color: #218838;
-}
+	button:hover {
+		background-color: #0056b3;
+	}
 
+/* Tabla de Detalles */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
 }
 
-table th,
-table td {
-    padding: 8px;
-    border: 1px solid #ddd;
-    text-align: left;
+th, td {
+	border: 1px solid #ddd;
+	padding: 5px;
+	text-align: left;
 }
 
-table th {
-    background-color: #f9f9f9;
-    font-weight: bold;
+th {
+	background-color: #f2f2f2;
 }
 
-table td input {
-    width: 50px; /* Ancho máximo de 50px */
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+/* Ajuste de ancho máximo para los campos de la tabla */
+table input {
+	max-width: 50px;
+	width: 100%;
+	padding: 3px;
 }
+
+/* Estilos para la celda de Soldadores */
+.soldadores {
+	display: flex;
+	gap: 5px;
+}
+
+	.soldadores input {
+		max-width: 50px;
+		flex: 1;
+	}
+
+/* Login */
+.login-container {
+	max-width: 300px;
+	margin: auto;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	text-align: center;
+}
+
+	.login-container input {
+		width: calc(100% - 12px);
+	}
+
+/* Estilos para enlaces */
+a {
+	display: inline-block;
+	margin-top: 10px;
+	color: #007bff;
+	text-decoration: none;
+}
+
+	a:hover {
+		text-decoration: underline;
+	}
+
+/* Estilos para los botones de acciones */
+.actions {
+	white-space: nowrap; /* Evita que los botones se coloquen en varias líneas */
+}
+
+	.actions button {
+		margin-right: 5px; /* Espacio entre botones */
+	}
