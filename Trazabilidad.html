@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nueva Trazabilidad</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Nueva Trazabilidad</h1>
+		<form>
+			<fieldset>
+				<legend>Pedido END</legend>
+				<label for="pedido-end">Pedido END:</label>
+				<select id="pedido-end" onchange="actualizarDatosPedido()">
+					<option value="">Seleccione...</option>
+					<option value="YPF">YPF - Vaca Muerta - AR4.PMO-END.Pr.10</option>
+					<option value="Tecpetrol">Tecpetrol - Sierras Blancas - F-01.SIEBLAN-CO</option>
+				</select>
+				<div>
+					<div>
+						<label>Cliente:</label> <span id="cliente"></span>
+					</div>
+					<div>
+						<label>Proyecto:</label> <span id="proyecto"></span>
+					</div>
+					<div>
+						<label>Formulario Cliente:</label> <span id="form-cliente"></span>
+					</div>
+					<div>
+						<label>Fecha:</label> <span id="fecha"></span>
+					</div>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Datos Principales</legend>
+				<div>
+					<label>Fecha:</label> <input type="date">
+					<label>Revision:</label> <input type="number">
+					<label>Solicitante:</label> <input type="text">
+				</div>
+				<div>
+					<label>Operador:</label> <select id="operador"></select>
+					<label>Asistente:</label> <select id="asistente"></select>
+					<label>Vehiculo:</label> <select id="vehiculo"></select>
+				</div>
+				<div>
+					<label>Servicios:</label>
+					<input type="checkbox"> RI
+					<input type="checkbox"> LP
+					<input type="checkbox"> UT
+					<input type="checkbox"> DN
+					<input type="checkbox"> Rev. Inm.
+				</div>
+				<div>
+					<label>Equipo:</label> <select id="equipo"></select>
+					<label>Actividad:</label> <input type="text">
+				</div>
+				<div>
+					<label>Dosis &micro;Sv Operador:</label> <input type="text">
+					<label>Dosis &micro;Sv Asistente:</label> <input type="text">
+				</div>
+				<div>
+					<label>Activo:</label> <input type="checkbox" checked>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Observaciones del Servicio</legend>
+				<textarea rows="20" cols="20"></textarea>
+			</fieldset>
+			<fieldset>
+				<legend>Detalles del Servicio</legend>
+				<label>Placas:</label>
+				<table>
+					<tr>
+						<td><label>2"</label> <input type="text"></td>
+						<td><label>3"</label> <input type="text"></td>
+						<td><label>4"</label> <input type="text"></td>
+						<td><label>6"</label> <input type="text"></td>
+						<td><label>8"</label> <input type="text"></td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td><label>10"</label> <input type="text"></td>
+						<td><label>12"</label> <input type="text"></td>
+						<td><label>14"</label> <input type="text"></td>
+						<td><label>16"</label> <input type="text"></td>
+						<td><label>18"</label> <input type="text"></td>
+					</tr>
+				</table>
+				<div>
+					<div>
+						<label>Horario Ingreso Obra:</label> <input type="time">
+						<label>Horario Egreso Obra:</label> <input type="time">
+					</div>
+					<div>
+						<label>Sab/Dom/Feriado:</label> <input type="text">
+					</div>
+				</div>
+				<table>
+					<tr>
+						<td>
+							<label>Coordinador END:</label>
+							<select id="coordinador">
+								<option value="">Seleccione...</option>
+								<option value="Alfonso Re">Alfonso Re</option>
+								<option value="Julio Reyes">Julio Reyes</option>
+							</select>
+						</td>
+						<td>
+							<label>Laboratorista:</label>
+							<select id="laboratorista">
+								<option value="">Seleccione...</option>
+								<option value="Andres Molina">Andres Molina</option>
+								<option value="Felipe Torres">Felipe Torres</option>
+							</select>
+						</td>
+						<td><label>Calidad Obra:</label> <input type="text"></td>
+					</tr>
+				</table>
+			</fieldset>
+
+			<button type="button" onclick="redirigir()" style="max-width: fit-content;">Guardar</button>
+
+			<script>
+				function redirigir() {
+					window.location.href = "ListarTrazabilidad.html";
+				}
+			</script>
+
+		</form>
+	</div>
+	<script>
+		function actualizarDatosPedido() {
+			const pedido = document.getElementById('pedido-end').value;
+			const datos = {
+				'YPF': { cliente: 'YPF', proyecto: 'Vaca Muerta', form: 'AR4.PMO-END.Pr.10', fecha: '10/01/2025' },
+				'Tecpetrol': { cliente: 'Tecpetrol', proyecto: 'Sierras Blancas', form: 'F-01.SIEBLAN-CO', fecha: '22/01/2025' }
+			};
+			if (pedido && datos[pedido]) {
+				document.getElementById('cliente').textContent = datos[pedido].cliente;
+				document.getElementById('proyecto').textContent = datos[pedido].proyecto;
+				document.getElementById('form-cliente').textContent = datos[pedido].form;
+				document.getElementById('fecha').textContent = datos[pedido].fecha;
+			} else {
+				document.getElementById('cliente').textContent = '';
+				document.getElementById('proyecto').textContent = '';
+				document.getElementById('form-cliente').textContent = '';
+				document.getElementById('fecha').textContent = '';
+			}
+		}
+
+		function cargarDatos() {
+			const operadores = ['Juan Perez', 'Luis Gomez', 'Carlos Rodriguez'].sort();
+			const asistentes = ['Antonio Lopez', 'Mario Fernandez', 'Jose Diaz'].sort();
+			const vehiculos = ['AA123BB', 'AB456CD', 'AC789EF', 'BA987GH', 'BC654IJ'].sort();
+			const equipos = [
+				'Fuente de Iridio-192 (RI)',
+				'Equipo de Radiografia Computarizada',
+				'Particulas Magneticas Yugo Electromagnetico',
+				'Tanque de Liquidos Penetrantes',
+				'Detector de Fallas por Ultrasonido'
+			].sort();
+
+			operadores.forEach(op => document.getElementById('operador').innerHTML += `<option>${op}</option>`);
+			asistentes.forEach(as => document.getElementById('asistente').innerHTML += `<option>${as}</option>`);
+			vehiculos.forEach(ve => document.getElementById('vehiculo').innerHTML += `<option>${ve}</option>`);
+			equipos.forEach(eq => document.getElementById('equipo').innerHTML += `<option>${eq}</option>`);
+		}
+		window.onload = cargarDatos;
+	</script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lista de Trazabilidades</title>
+	<link rel="stylesheet" href="styles.css">
+	<script>
+		function confirmDeleteTrazabilidad() {
+			alert("¿Estás seguro de que deseas eliminar la trazabilidad seleccionada?");
+		}
+
+		function confirmDeleteSelectedRows() {
+			alert("¿Estás seguro de que deseas eliminar las filas seleccionadas?");
+		}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<h2>Lista de Trazabilidades</h2>
+
+		<!-- Botones generales -->
+		<div class="button-group">
+			<button onclick="location.href='Trazabilidad.html'">Nuevo</button>
+			<button onclick="confirmDeleteSelectedRows()">Eliminar</button>
+			<button>Copiar</button>
+		</div>
+
+		<!-- Tabla de Trazabilidades -->
+		<table>
+			<thead>
+				<tr>
+					<th><input type="checkbox"></th>
+					<th>Id Traza</th>
+					<th>Fecha Traza</th>
+					<th>Operario</th>
+					<th>Cliente</th>
+					<th>Proyecto</th>
+					<th>Id Pedido</th>
+					<th>Pedido</th>
+					<th>Acciones</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- Fila 1 -->
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>100</td>
+					<td>01/01/2025</td>
+					<td>Juan Perez</td>
+					<td>YPF</td>
+					<td>Vaca Muerta</td>
+					<td>1</td>
+					<td>AR4.PMO-END.Pr.10</td>
+					<td class="actions">
+						<button onclick="location.href='Trazabilidad.html'">Editar</button>
+						<button onclick="confirmDeleteTrazabilidad()">Borrar</button>
+					</td>
+				</tr>
+
+				<!-- Fila 2 -->
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>101</td>
+					<td>20/01/2025</td>
+					<td>Luis Gomez</td>
+					<td>Tecpetrol</td>
+					<td>Sierras Blancas</td>
+					<td>2</td>
+					<td>F-01.SIEBLAN-CO</td>
+					<td class="actions">
+						<button onclick="location.href='Trazabilidad.html'">Editar</button>
+						<button onclick="confirmDeleteTrazabilidad()">Borrar</button>
+					</td>
+				</tr>
+
+				<!-- Fila 3 -->
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>101</td>
+					<td>25/01/2025</td>
+					<td>Carlos Rodr</td>
+					<td>Tecpetrol</td>
+					<td>Loma Lata</td>
+					<td>3</td>
+					<td>XX-B1-25-LOM.LAT</td>
+					<td class="actions">
+						<button onclick="location.href='Trazabilidad.html'">Editar</button>
+						<button onclick="confirmDeleteTrazabilidad()">Borrar</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
