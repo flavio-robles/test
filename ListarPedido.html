@@ -5,6 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Listar Pedidos END</title>
 	<link rel="stylesheet" href="styles.css">
+	<style>
+		/* Estilo para las filas de detalles */
+		.detail-row {
+			background-color: #e9e8e8; /* Color de fondo suave */
+		}
+	</style>
 	<script>
 		function toggleDetail(id) {
 			let detailRow = document.getElementById("detail-" + id);
@@ -12,15 +18,15 @@
 		}
 
 		function confirmDeletePedido() {
-			alert("Estas seguro de que deseas eliminar las filas seleccionadas?");
+			alert("¿Estas seguro de que deseas eliminar las filas seleccionadas?");
 		}
 
 		function confirmDeleteItem() {
-			alert("Estas seguro de que deseas eliminar la fila seleccionada?");
+			alert("¿Estas seguro de que deseas eliminar la fila seleccionada?");
 		}
 
 		function confirmDeleteSelectedRows() {
-			alert("Estas seguro de que deseas eliminar las filas seleccionadas?");
+			alert("¿Estas seguro de que deseas eliminar las filas seleccionadas?");
 		}
 	</script>
 </head>
@@ -33,6 +39,7 @@
 			<button onclick="location.href='Pedido.html'">Nuevo</button>
 			<button onclick="confirmDeleteSelectedRows()">Eliminar</button>
 			<button>Copiar</button>
+			<button>PDF</button>
 		</div>
 
 		<!-- Tabla de Pedidos (Cabecera) -->
@@ -63,9 +70,10 @@
 						<button onclick="location.href='Pedido.html'">Editar</button>
 						<button onclick="confirmDeletePedido()">Eliminar</button>
 						<button onclick="toggleDetail(1)">Expandir</button>
+						<button>PDF</button>
 					</td>
 				</tr>
-				<tr id="detail-1" style="display: none;">
+				<tr id="detail-1" class="detail-row" style="display: none;">
 					<td colspan="8">
 						<div>
 							<strong>Detalles del Pedido</strong>
@@ -141,9 +149,10 @@
 						<button onclick="location.href='Pedido.html'">Editar</button>
 						<button onclick="confirmDeletePedido()">Eliminar</button>
 						<button onclick="toggleDetail(2)">Expandir</button>
+						<button>PDF</button>
 					</td>
 				</tr>
-				<tr id="detail-2" style="display: none;">
+				<tr id="detail-2" class="detail-row" style="display: none;">
 					<td colspan="8">
 						<div>
 							<strong>Detalles del Pedido</strong>
@@ -205,7 +214,6 @@
 						</div>
 					</td>
 				</tr>
-
 			</tbody>
 		</table>
 	</div>

@@ -11,49 +11,63 @@
 	<form>
 		<fieldset>
 			<legend>Datos de Cabecera</legend>
-			<label>Cliente:</label>
-			<select>
-				<option>Capex</option>
-				<option>Pan American Energy</option>
-				<option>Pluspetrol</option>
-				<option>Tecpetrol</option>
-				<option>YPF</option>
-			</select>
-			<label>Solicitante:</label>
-			<input type="text">
-			<label>Email:</label>
-			<input type="email">
-			<label>Formulario Cliente:</label>
-			<input type="text">
-			<label>Fecha:</label>
-			<input type="date">
-			<label>Revisión:</label>
-			<input type="number">
-			<label>Proyecto:</label>
-			<select>
-				<option>Gasoducto Sierras Blancas</option>
-				<option>Gasoducto Tratayén</option>
-				<option>Proyecto Fortín de Piedra</option>
-				<option>Proyecto Lindero Atravesado</option>
-				<option>Proyecto Vaca Muerta Sur</option>
-			</select>
-			<label>Tipo END:</label>
-			<select>
-				<option>LP</option>
-				<option>PM</option>
-				<option>RI</option>
-			</select>
-			<label>Activo:</label>
-			<select>
-				<option>Sí</option>
-				<option>No</option>
-			</select>
+			<div>
+				<label>Cliente:</label>
+				<select>
+					<option>Capex</option>
+					<option>Pan American Energy</option>
+					<option>Pluspetrol</option>
+					<option>Tecpetrol</option>
+					<option>YPF</option>
+				</select>
+				<label>Formulario Cliente:</label>
+				<input type="text">
+			</div>
+
+			<div>
+				<label>Fecha:</label>
+				<input type="date">
+				<label>Revisión:</label>
+				<input type="number">
+			</div>
+
+			<div>
+				<label>Fecha de Pedido:</label>
+				<input type="date">
+
+				<label>Proyecto:</label>
+				<select>
+					<option>Gasoducto Sierras Blancas</option>
+					<option>Gasoducto Tratayén</option>
+					<option>Proyecto Fortín de Piedra</option>
+					<option>Proyecto Lindero Atravesado</option>
+					<option>Proyecto Vaca Muerta Sur</option>
+				</select>
+				<label>Tipo END:</label>
+				<select>
+					<option>LP</option>
+					<option>PM</option>
+					<option>RI</option>
+				</select>
+			</div>
+
+			<div>
+				<label>Solicitante:</label>
+				<input type="text">
+				<label>Email:</label>
+				<input type="email">
+			</div>
+			<div>
+				<input type="checkbox" checked>&nbsp;Activo
+			</div>
+
 		</fieldset>
 
 		<fieldset>
 			<legend>Detalles del Pedido</legend>
 			<table>
 				<tr>
+					<th>Item</th>
 					<th>LineaNro</th>
 					<th>Diametro</th>
 					<th>Schedule</th>
@@ -65,36 +79,85 @@
 					<th>Identificación Adic.</th>
 					<th>OT</th>
 					<th>Observaciones</th>
+				</tr>
+				<tr>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td class="soldadores">
+						<input type="text"><input type="text"><input type="text"><input type="text">
+					</td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="date"></td>
+				</tr>
+				<tr>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td class="soldadores">
+						<input type="text"><input type="text"><input type="text"><input type="text">
+					</td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="date"></td>
+				</tr>
+				<tr>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td class="soldadores">
+						<input type="text"><input type="text"><input type="text"><input type="text">
+					</td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="date"></td>
+				</tr>
+				<tr>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td class="soldadores">
+						<input type="text"><input type="text"><input type="text"><input type="text">
+					</td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="date"></td>
+				</tr>
+			</table>
+			<table>
+				<tr>
 					<th>Resp. Calidad</th>
 					<th>Fecha Resp. Calidad</th>
 					<th>Resp. Empresa</th>
 					<th>Fecha Resp. Empresa</th>
 				</tr>
-				<script>
-					for (let i = 0; i < 4; i++) {
-						document.write(`
-												<tr>
-													<td><input type="text"></td>
-													<td><input type="text"></td>
-													<td><input type="text"></td>
-													<td><input type="text"></td>
-													<td><input type="text"></td>
-													<td class="soldadores">
-														<input type="text"><input type="text"><input type="text"><input type="text">
-													</td>
-													<td><input type="text"></td>
-													<td><input type="text"></td>
-													<td><input type="text"></td>
-													<td><input type="text"></td>
-													<td><input type="text"></td>
-													<td><input type="text"></td>
-													<td><input type="date"></td>
-													<td><input type="text"></td>
-													<td><input type="date"></td>
-												</tr>
-											`);
-					}
-				</script>
+				<tr>
+					<td><input type="text"></td>
+					<td><input type="date"></td>
+					<td><input type="text"></td>
+					<td><input type="date"></td>
+				</tr>
 			</table>
 		</fieldset>
 
