@@ -31,191 +31,189 @@
 	</script>
 </head>
 <body>
-	<div class="container">
-		<h2>Lista de Pedidos END</h2>
+	<h2>Lista de Pedidos END</h2>
 
-		<!-- Botones generales -->
-		<div class="button-group">
-			<button onclick="location.href='Pedido.html'">Nuevo</button>
-			<button onclick="confirmDeleteSelectedRows()">Eliminar</button>
-			<button>Copiar</button>
-			<button>PDF</button>
-		</div>
-
-		<!-- Tabla de Pedidos (Cabecera) -->
-		<table>
-			<thead>
-				<tr>
-					<th><input type="checkbox"></th>
-					<th>ID</th>
-					<th>Cliente</th>
-					<th>Solicitante</th>
-					<th>Proyecto</th>
-					<th>Fecha</th>
-					<th>Revision</th>
-					<th>Acciones</th>
-				</tr>
-			</thead>
-			<tbody>
-				<!-- Pedido 1 -->
-				<tr>
-					<td><input type="checkbox"></td>
-					<td>1</td>
-					<td>YPF</td>
-					<td>Juan Perez</td>
-					<td>Proyecto Vaca Muerta Sur</td>
-					<td>2024-02-01</td>
-					<td>1</td>
-					<td class="actions">
-						<button onclick="location.href='Pedido.html'">Editar</button>
-						<button onclick="confirmDeletePedido()">Eliminar</button>
-						<button onclick="toggleDetail(1)">Expandir</button>
-						<button>PDF</button>
-					</td>
-				</tr>
-				<tr id="detail-1" class="detail-row" style="display: none;">
-					<td colspan="8">
-						<div>
-							<strong>Detalles del Pedido</strong>
-							<div class="button-group">
-								<button>Eliminar</button>
-								<button>Copiar</button>
-							</div>
-							<table>
-								<thead>
-									<tr>
-										<th><input type="checkbox"></th>
-										<th>Linea</th>
-										<th>Diametro</th>
-										<th>Schedule</th>
-										<th>Espesor</th>
-										<th>Junta</th>
-										<th>Acciones</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td><input type="checkbox"></td>
-										<td>L1</td>
-										<td>10"</td>
-										<td>STD</td>
-										<td>5mm</td>
-										<td>J-001</td>
-										<td><button onclick="confirmDeleteItem()">Eliminar</button></td>
-									</tr>
-									<tr>
-										<td><input type="checkbox"></td>
-										<td>L2</td>
-										<td>8"</td>
-										<td>XS</td>
-										<td>6mm</td>
-										<td>J-002</td>
-										<td><button onclick="confirmDeleteItem()">Eliminar</button></td>
-									</tr>
-									<tr>
-										<td><input type="checkbox"></td>
-										<td>L3</td>
-										<td>6"</td>
-										<td>XXS</td>
-										<td>8mm</td>
-										<td>J-003</td>
-										<td><button onclick="confirmDeleteItem()">Eliminar</button></td>
-									</tr>
-									<tr>
-										<td><input type="checkbox"></td>
-										<td>L4</td>
-										<td>12"</td>
-										<td>STD</td>
-										<td>4mm</td>
-										<td>J-004</td>
-										<td><button onclick="confirmDeleteItem()">Eliminar</button></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</td>
-				</tr>
-
-				<!-- Pedido 2 -->
-				<tr>
-					<td><input type="checkbox"></td>
-					<td>2</td>
-					<td>Pan American Energy</td>
-					<td>Maria Lopez</td>
-					<td>Gasoducto Tratayen</td>
-					<td>2024-02-05</td>
-					<td>2</td>
-					<td class="actions">
-						<button onclick="location.href='Pedido.html'">Editar</button>
-						<button onclick="confirmDeletePedido()">Eliminar</button>
-						<button onclick="toggleDetail(2)">Expandir</button>
-						<button>PDF</button>
-					</td>
-				</tr>
-				<tr id="detail-2" class="detail-row" style="display: none;">
-					<td colspan="8">
-						<div>
-							<strong>Detalles del Pedido</strong>
-							<div class="button-group">
-								<button>Eliminar</button>
-								<button>Copiar</button>
-							</div>
-							<table>
-								<thead>
-									<tr>
-										<th><input type="checkbox"></th>
-										<th>Linea</th>
-										<th>Diametro</th>
-										<th>Schedule</th>
-										<th>Espesor</th>
-										<th>Junta</th>
-										<th>Acciones</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td><input type="checkbox"></td>
-										<td>L1</td>
-										<td>12"</td>
-										<td>STD</td>
-										<td>5mm</td>
-										<td>J-005</td>
-										<td><button onclick="confirmDeleteItem()">Eliminar</button></td>
-									</tr>
-									<tr>
-										<td><input type="checkbox"></td>
-										<td>L2</td>
-										<td>10"</td>
-										<td>XS</td>
-										<td>6mm</td>
-										<td>J-006</td>
-										<td><button onclick="confirmDeleteItem()">Eliminar</button></td>
-									</tr>
-									<tr>
-										<td><input type="checkbox"></td>
-										<td>L3</td>
-										<td>8"</td>
-										<td>XXS</td>
-										<td>8mm</td>
-										<td>J-007</td>
-										<td><button onclick="confirmDeleteItem()">Eliminar</button></td>
-									</tr>
-									<tr>
-										<td><input type="checkbox"></td>
-										<td>L4</td>
-										<td>6"</td>
-										<td>STD</td>
-										<td>4mm</td>
-										<td>J-008</td>
-										<td><button onclick="confirmDeleteItem()">Eliminar</button></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</td>
-				</tr>
-			</tbody>
-		</table>
+	<!-- Botones generales -->
+	<div class="button-group">
+		<button onclick="location.href='Pedido.html'">Nuevo</button>
+		<button onclick="confirmDeleteSelectedRows()">Eliminar</button>
+		<button>Copiar</button>
+		<button>PDF</button>
 	</div>
+
+	<!-- Tabla de Pedidos (Cabecera) -->
+	<table>
+		<thead>
+			<tr>
+				<th><input type="checkbox"></th>
+				<th>ID</th>
+				<th>Cliente</th>
+				<th>Solicitante</th>
+				<th>Proyecto</th>
+				<th>Fecha</th>
+				<th>Revision</th>
+				<th>Acciones</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- Pedido 1 -->
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>1</td>
+				<td>YPF</td>
+				<td>Juan Perez</td>
+				<td>Proyecto Vaca Muerta Sur</td>
+				<td>2024-02-01</td>
+				<td>1</td>
+				<td class="actions">
+					<button onclick="location.href='Pedido.html'">Editar</button>
+					<button onclick="confirmDeletePedido()">Eliminar</button>
+					<button onclick="toggleDetail(1)">Expandir</button>
+					<button>PDF</button>
+				</td>
+			</tr>
+			<tr id="detail-1" class="detail-row" style="display: none;">
+				<td colspan="8">
+					<div>
+						<strong>Detalles del Pedido</strong>
+						<div class="button-group">
+							<button>Eliminar</button>
+							<button>Copiar</button>
+						</div>
+						<table>
+							<thead>
+								<tr>
+									<th><input type="checkbox"></th>
+									<th>Linea</th>
+									<th>Diametro</th>
+									<th>Schedule</th>
+									<th>Espesor</th>
+									<th>Junta</th>
+									<th>Acciones</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><input type="checkbox"></td>
+									<td>L1</td>
+									<td>10"</td>
+									<td>STD</td>
+									<td>5mm</td>
+									<td>J-001</td>
+									<td><button onclick="confirmDeleteItem()">Eliminar</button></td>
+								</tr>
+								<tr>
+									<td><input type="checkbox"></td>
+									<td>L2</td>
+									<td>8"</td>
+									<td>XS</td>
+									<td>6mm</td>
+									<td>J-002</td>
+									<td><button onclick="confirmDeleteItem()">Eliminar</button></td>
+								</tr>
+								<tr>
+									<td><input type="checkbox"></td>
+									<td>L3</td>
+									<td>6"</td>
+									<td>XXS</td>
+									<td>8mm</td>
+									<td>J-003</td>
+									<td><button onclick="confirmDeleteItem()">Eliminar</button></td>
+								</tr>
+								<tr>
+									<td><input type="checkbox"></td>
+									<td>L4</td>
+									<td>12"</td>
+									<td>STD</td>
+									<td>4mm</td>
+									<td>J-004</td>
+									<td><button onclick="confirmDeleteItem()">Eliminar</button></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</td>
+			</tr>
+
+			<!-- Pedido 2 -->
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>2</td>
+				<td>Pan American Energy</td>
+				<td>Maria Lopez</td>
+				<td>Gasoducto Tratayen</td>
+				<td>2024-02-05</td>
+				<td>2</td>
+				<td class="actions">
+					<button onclick="location.href='Pedido.html'">Editar</button>
+					<button onclick="confirmDeletePedido()">Eliminar</button>
+					<button onclick="toggleDetail(2)">Expandir</button>
+					<button>PDF</button>
+				</td>
+			</tr>
+			<tr id="detail-2" class="detail-row" style="display: none;">
+				<td colspan="8">
+					<div>
+						<strong>Detalles del Pedido</strong>
+						<div class="button-group">
+							<button>Eliminar</button>
+							<button>Copiar</button>
+						</div>
+						<table>
+							<thead>
+								<tr>
+									<th><input type="checkbox"></th>
+									<th>Linea</th>
+									<th>Diametro</th>
+									<th>Schedule</th>
+									<th>Espesor</th>
+									<th>Junta</th>
+									<th>Acciones</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><input type="checkbox"></td>
+									<td>L1</td>
+									<td>12"</td>
+									<td>STD</td>
+									<td>5mm</td>
+									<td>J-005</td>
+									<td><button onclick="confirmDeleteItem()">Eliminar</button></td>
+								</tr>
+								<tr>
+									<td><input type="checkbox"></td>
+									<td>L2</td>
+									<td>10"</td>
+									<td>XS</td>
+									<td>6mm</td>
+									<td>J-006</td>
+									<td><button onclick="confirmDeleteItem()">Eliminar</button></td>
+								</tr>
+								<tr>
+									<td><input type="checkbox"></td>
+									<td>L3</td>
+									<td>8"</td>
+									<td>XXS</td>
+									<td>8mm</td>
+									<td>J-007</td>
+									<td><button onclick="confirmDeleteItem()">Eliminar</button></td>
+								</tr>
+								<tr>
+									<td><input type="checkbox"></td>
+									<td>L4</td>
+									<td>6"</td>
+									<td>STD</td>
+									<td>4mm</td>
+									<td>J-008</td>
+									<td><button onclick="confirmDeleteItem()">Eliminar</button></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
 </body>
 </html>

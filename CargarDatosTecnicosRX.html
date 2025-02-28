@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cargar Datos T&eacute;cnicos de Servicio: Gammagraf&iacute;a</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<h1>Cargar Datos T&eacute;cnicos de Servicio: Gammagraf&iacute;a</h1>
+	<form>
+		<!-- Secci&oacute;n: DATOS GENERALES -->
+		<fieldset>
+			<legend>DATOS GENERALES</legend>
+			<div>
+				<label>Id:</label>
+				<input type="text">
+				<label>Fecha:</label>
+				<input type="date">
+				<label>NroInforme:</label>
+				<input type="text">
+				<label>NroPedido (Cliente/Proyecto/Obra/Planta):</label>
+				<input type="text">
+			</div>
+			<div>
+				<label>NormaAplicaci&oacute;n:</label>
+				<input type="text">
+				<label>NormaEvaluaci&oacute;n:</label>
+				<select>
+					<option>ASME B31.3</option>
+					<option>ASMEB31.4</option>
+					<option>ASMEB31.8</option>
+					<option>ASME VIII</option>
+					<option>ASME IX</option>
+					<option>API1104</option>
+					<option>API650</option>
+					<option>AWS D1.1</option>
+				</select>
+				<label>LineaIsometrico:</label>
+				<input type="text">
+			</div>
+		</fieldset>
+
+		<!-- Secci&oacute;n: DATOS -->
+		<fieldset>
+			<legend>DATOS</legend>
+			<div>
+				<label>RadioIsotopo:</label>
+				<input type="text">
+				<label>Actividad:</label>
+				<select>
+					<option>5 CI</option>
+					<option>10 CI</option>
+					<option>15 CI</option>
+					<option>20 CI</option>
+					<option>25 CI</option>
+					<option>30 CI</option>
+					<option>35 CI</option>
+					<option>40 CI</option>
+					<option>45 CI</option>
+					<option>50 CI</option>
+					<option>55 CI</option>
+					<option>60 CI</option>
+					<option>65 CI</option>
+					<option>70 CI</option>
+					<option>75 CI</option>
+					<option>80 CI</option>
+					<option>85 CI</option>
+					<option>90 CI</option>
+				</select>
+				<label>FocoEfectivo:</label>
+				<input type="text">
+			</div>
+			<div>
+				<label>TipoFilm:</label>
+				<select>
+					<option>AA400</option>
+					<option>T200</option>
+					<option>MX125</option>
+				</select>
+				<label>IQI:</label>
+				<select>
+					<option>1A</option>
+					<option>1B</option>
+				</select>
+				<label>Material:</label>
+				<select>
+					<option>ACERO AL CARBONO</option>
+					<option>ACERO INOXIDABLE</option>
+					<option>DUPLEX</option>
+				</select>
+			</div>
+			<div>
+				<label>TiempoExposici&oacute;n:</label>
+				<input type="number">
+				<label>Unidad:</label>
+				<select>
+					<option selected>MIN</option>
+					<option>HS</option>
+					<option>SEG</option>
+				</select>
+				<label>Hilo:</label>
+				<input type="number" min="1" max="6">
+				<label>TecnicaUsada:</label>
+				<select>
+					<option>A</option>
+					<option>B</option>
+					<option>C</option>
+					<option>D</option>
+					<option>E</option>
+				</select>
+			</div>
+			<div>
+				<label>CantidadExposiciones:</label>
+				<input type="number">
+				<label>DistanciaF.Pelicula:</label>
+				<select>
+					<option>400mm</option>
+					<option>3"</option>
+					<option>4"</option>
+					<option>6"</option>
+					<option>8"</option>
+					<option>10"</option>
+					<option>12"</option>
+					<option>14"</option>
+					<option>18"</option>
+					<option>20"</option>
+					<option>22"</option>
+					<option>24"</option>
+				</select>
+				<label>Procedimiento:</label>
+				<input type="text">
+			</div>
+		</fieldset>
+
+		<!-- Secci&oacute;n: EVALUACIONES -->
+		<fieldset>
+			<legend>EVALUACIONES</legend>
+			<table>
+				<tr>
+					<th>NroSoladura</th>
+					<th>Diametro</th>
+					<th>Espesor(mm)</th>
+					<th>Soldador</th>
+					<th>Pos1</th>
+					<th>Pos2</th>
+					<th>Pos3</th>
+					<th>Pos4</th>
+					<th>Resultado</th>
+					<th>Observaciones</th>
+				</tr>
+				<tr>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td>
+						<select>
+							<option>OK</option>
+							<option>RECHAZADO</option>
+						</select>
+					</td>
+					<td><input type="text"></td>
+				</tr>
+				<tr>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td>
+						<select>
+							<option>OK</option>
+							<option>RECHAZADO</option>
+						</select>
+					</td>
+					<td><input type="text"></td>
+				</tr>
+				<tr>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td>
+						<select>
+							<option>OK</option>
+							<option>RECHAZADO</option>
+						</select>
+					</td>
+					<td><input type="text"></td>
+				</tr>
+				<tr>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td>
+						<select>
+							<option>OK</option>
+							<option>RECHAZADO</option>
+						</select>
+					</td>
+					<td><input type="text"></td>
+				</tr>
+				<tr>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td><input type="text"></td>
+					<td>
+						<select>
+							<option>OK</option>
+							<option>RECHAZADO</option>
+						</select>
+					</td>
+					<td><input type="text"></td>
+				</tr>
+			</table>
+		</fieldset>
+
+		<!-- Secci&oacute;n: FIRMAS -->
+		<fieldset>
+			<legend>FIRMAS</legend>
+			<div>
+				<label>Interprete:</label>
+				<select>
+					<option>Andres Molina</option>
+					<option>Felipe Torres</option>
+				</select>
+				<label>InspectorVB:</label>
+				<select>
+					<option>Alfonso Re</option>
+					<option>Julio Reyes</option>
+				</select>
+			</div>
+			<div>
+				<label>FechaInspecci&oacute;nVB:</label>
+				<input type="date">
+				<label>ClienteVB:</label>
+				<select>
+					<option>Lucas Juarez</option>
+				</select>
+				<label>FechaClienteVB:</label>
+				<input type="date">
+			</div>
+		</fieldset>
+
+		<button type="submit">Guardar</button>
+	</form>
+</body>
+</html>

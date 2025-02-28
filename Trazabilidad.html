@@ -7,131 +7,129 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<div class="container">
-		<h1>Nueva Trazabilidad</h1>
-		<form>
-			<fieldset>
-				<legend>Pedido END</legend>
-				<label for="pedido-end">Pedido END:</label>
-				<select id="pedido-end" onchange="actualizarDatosPedido()">
-					<option value="">Seleccione...</option>
-					<option value="YPF">YPF - Vaca Muerta - AR4.PMO-END.Pr.10</option>
-					<option value="Tecpetrol">Tecpetrol - Sierras Blancas - F-01.SIEBLAN-CO</option>
-				</select>
+	<h1>Nueva Trazabilidad</h1>
+	<form>
+		<fieldset>
+			<legend>Pedido END</legend>
+			<label for="pedido-end">Pedido END:</label>
+			<select id="pedido-end" onchange="actualizarDatosPedido()">
+				<option value="">Seleccione...</option>
+				<option value="YPF">YPF - Vaca Muerta - AR4.PMO-END.Pr.10</option>
+				<option value="Tecpetrol">Tecpetrol - Sierras Blancas - F-01.SIEBLAN-CO</option>
+			</select>
+			<div>
 				<div>
-					<div>
-						<label>Cliente:</label> <span id="cliente"></span>
-					</div>
-					<div>
-						<label>Proyecto:</label> <span id="proyecto"></span>
-					</div>
-					<div>
-						<label>Formulario Cliente:</label> <span id="form-cliente"></span>
-					</div>
-					<div>
-						<label>Fecha:</label> <span id="fecha"></span>
-					</div>
-				</div>
-			</fieldset>
-			<fieldset>
-				<legend>Datos Principales</legend>
-				<div>
-					<label>Fecha:</label> <input type="date">
-					<label>Revision:</label> <input type="number">
-					<label>Solicitante:</label> <input type="text">
+					<label>Cliente:</label> <span id="cliente"></span>
 				</div>
 				<div>
-					<label>Operador:</label> <select id="operador"></select>
-					<label>Asistente:</label> <select id="asistente"></select>
-					<label>Vehiculo:</label> <select id="vehiculo"></select>
+					<label>Proyecto:</label> <span id="proyecto"></span>
 				</div>
 				<div>
-					<label>Servicios:</label>
-					<input type="checkbox"> RI
-					<input type="checkbox"> LP
-					<input type="checkbox"> UT
-					<input type="checkbox"> DN
-					<input type="checkbox"> Rev. Inm.
+					<label>Formulario Cliente:</label> <span id="form-cliente"></span>
 				</div>
 				<div>
-					<label>Equipo:</label> <select id="equipo"></select>
-					<label>Actividad:</label> <input type="text">
+					<label>Fecha:</label> <span id="fecha"></span>
+				</div>
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Datos Principales</legend>
+			<div>
+				<label>Fecha:</label> <input type="date">
+				<label>Revision:</label> <input type="number">
+				<label>Solicitante:</label> <input type="text">
+			</div>
+			<div>
+				<label>Operador:</label> <select id="operador"></select>
+				<label>Asistente:</label> <select id="asistente"></select>
+				<label>Vehiculo:</label> <select id="vehiculo"></select>
+			</div>
+			<div>
+				<label>Servicios:</label>
+				<input type="checkbox"> RI
+				<input type="checkbox"> LP
+				<input type="checkbox"> UT
+				<input type="checkbox"> DN
+				<input type="checkbox"> Rev. Inm.
+			</div>
+			<div>
+				<label>Equipo:</label> <select id="equipo"></select>
+				<label>Actividad:</label> <input type="text">
+			</div>
+			<div>
+				<label>Dosis &micro;Sv Operador:</label> <input type="text">
+				<label>Dosis &micro;Sv Asistente:</label> <input type="text">
+			</div>
+			<div>
+				<input type="checkbox" checked>&nbsp;Activo
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Observaciones del Servicio</legend>
+			<textarea rows="20" cols="20"></textarea>
+		</fieldset>
+		<fieldset>
+			<legend>Detalles del Servicio</legend>
+			<label>Placas:</label>
+			<table>
+				<tr>
+					<td><label>2"</label> <input type="text"></td>
+					<td><label>3"</label> <input type="text"></td>
+					<td><label>4"</label> <input type="text"></td>
+					<td><label>6"</label> <input type="text"></td>
+					<td><label>8"</label> <input type="text"></td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td><label>10"</label> <input type="text"></td>
+					<td><label>12"</label> <input type="text"></td>
+					<td><label>14"</label> <input type="text"></td>
+					<td><label>16"</label> <input type="text"></td>
+					<td><label>18"</label> <input type="text"></td>
+				</tr>
+			</table>
+			<div>
+				<div>
+					<label>Horario Ingreso Obra:</label> <input type="time">
+					<label>Horario Egreso Obra:</label> <input type="time">
 				</div>
 				<div>
-					<label>Dosis &micro;Sv Operador:</label> <input type="text">
-					<label>Dosis &micro;Sv Asistente:</label> <input type="text">
+					<label>Sab/Dom/Feriado:</label> <input type="text">
 				</div>
-				<div>
-					<input type="checkbox" checked>&nbsp;Activo
-				</div>
-			</fieldset>
-			<fieldset>
-				<legend>Observaciones del Servicio</legend>
-				<textarea rows="20" cols="20"></textarea>
-			</fieldset>
-			<fieldset>
-				<legend>Detalles del Servicio</legend>
-				<label>Placas:</label>
-				<table>
-					<tr>
-						<td><label>2"</label> <input type="text"></td>
-						<td><label>3"</label> <input type="text"></td>
-						<td><label>4"</label> <input type="text"></td>
-						<td><label>6"</label> <input type="text"></td>
-						<td><label>8"</label> <input type="text"></td>
-					</tr>
-				</table>
-				<table>
-					<tr>
-						<td><label>10"</label> <input type="text"></td>
-						<td><label>12"</label> <input type="text"></td>
-						<td><label>14"</label> <input type="text"></td>
-						<td><label>16"</label> <input type="text"></td>
-						<td><label>18"</label> <input type="text"></td>
-					</tr>
-				</table>
-				<div>
-					<div>
-						<label>Horario Ingreso Obra:</label> <input type="time">
-						<label>Horario Egreso Obra:</label> <input type="time">
-					</div>
-					<div>
-						<label>Sab/Dom/Feriado:</label> <input type="text">
-					</div>
-				</div>
-				<table>
-					<tr>
-						<td>
-							<label>Coordinador END:</label>
-							<select id="coordinador">
-								<option value="">Seleccione...</option>
-								<option value="Alfonso Re">Alfonso Re</option>
-								<option value="Julio Reyes">Julio Reyes</option>
-							</select>
-						</td>
-						<td>
-							<label>Laboratorista:</label>
-							<select id="laboratorista">
-								<option value="">Seleccione...</option>
-								<option value="Andres Molina">Andres Molina</option>
-								<option value="Felipe Torres">Felipe Torres</option>
-							</select>
-						</td>
-						<td><label>Calidad Obra:</label> <input type="text"></td>
-					</tr>
-				</table>
-			</fieldset>
+			</div>
+			<table>
+				<tr>
+					<td>
+						<label>Coordinador END:</label>
+						<select id="coordinador">
+							<option value="">Seleccione...</option>
+							<option value="Alfonso Re">Alfonso Re</option>
+							<option value="Julio Reyes">Julio Reyes</option>
+						</select>
+					</td>
+					<td>
+						<label>Laboratorista:</label>
+						<select id="laboratorista">
+							<option value="">Seleccione...</option>
+							<option value="Andres Molina">Andres Molina</option>
+							<option value="Felipe Torres">Felipe Torres</option>
+						</select>
+					</td>
+					<td><label>Calidad Obra:</label> <input type="text"></td>
+				</tr>
+			</table>
+		</fieldset>
 
-			<button type="button" onclick="redirigir()" style="max-width: fit-content;">Guardar</button>
+		<button type="button" onclick="redirigir()" style="max-width: fit-content;">Guardar</button>
 
-			<script>
-				function redirigir() {
-					window.location.href = "ListarTrazabilidad.html";
-				}
-			</script>
+		<script>
+			function redirigir() {
+				window.location.href = "ListarTrazabilidad.html";
+			}
+		</script>
 
-		</form>
-	</div>
+	</form>
 	<script>
 		function actualizarDatosPedido() {
 			const pedido = document.getElementById('pedido-end').value;

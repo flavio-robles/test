@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Servicios</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function confirmDeleteServicio() {
+            alert("¿Estás seguro de que deseas eliminar las filas seleccionadas?");
+        }
+
+        function confirmDeleteSelectedRows() {
+            alert("¿Estás seguro de que deseas eliminar las filas seleccionadas?");
+        }
+
+        function editarServicio(tipoServicio) {
+            if (tipoServicio === "LP") {
+                window.location.href = "CargarDatosTecnicosLP.html";
+            } else if (tipoServicio === "RX") {
+                window.location.href = "CargarDatosTecnicosRX.html";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Lista de Servicios</h2>
+
+    <!-- Botones generales -->
+    <div class="button-group">
+        <button onclick="location.href='CargarDatosTecnicosRX.html'">Nuevo Servicio RX</button>
+        <button onclick="location.href='CargarDatosTecnicosLP.html'">Nuevo Servicio LP</button>
+        <button onclick="confirmDeleteSelectedRows()">Eliminar</button>
+        <button>Copiar</button>
+        <button>PDF</button>
+    </div>
+
+    <!-- Tabla de Servicios -->
+    <table>
+        <thead>
+            <tr>
+                <th><input type="checkbox"></th>
+                <th>ID</th>
+                <th>Cliente</th>
+                <th>Solicitante</th>
+                <th>Pedido ID</th>
+                <th>Proyecto</th>
+                <th>Obra</th>
+                <th>Fecha</th>
+                <th>Tipo Servicio</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Servicio 1 -->
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>1</td>
+                <td>YPF</td>
+                <td>Juan Perez</td>
+                <td>1001</td>
+                <td>Proyecto Vaca Muerta Sur</td>
+                <td>Obra A</td>
+                <td>2024-02-01</td>
+                <td>LP</td>
+                <td class="actions">
+                    <button onclick="editarServicio('LP')">Editar</button>
+                    <button onclick="confirmDeleteServicio()">Eliminar</button>
+                    <button>Informe</button>
+                    <button>Parte Diario</button>
+                </td>
+            </tr>
+
+            <!-- Servicio 2 -->
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>2</td>
+                <td>Pan American Energy</td>
+                <td>Maria Lopez</td>
+                <td>1002</td>
+                <td>Gasoducto Tratayen</td>
+                <td>Obra B</td>
+                <td>2024-02-05</td>
+                <td>RX</td>
+                <td class="actions">
+                    <button onclick="editarServicio('RX')">Editar</button>
+                    <button onclick="confirmDeleteServicio()">Eliminar</button>
+                    <button>Informe</button>
+                    <button>Parte Diario</button>
+                </td>
+            </tr>
+
+            <!-- Servicio 3 -->
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>3</td>
+                <td>Tecpetrol</td>
+                <td>Carlos Gomez</td>
+                <td>1003</td>
+                <td>Proyecto Lindero Atravesado</td>
+                <td>Obra C</td>
+                <td>2024-02-10</td>
+                <td>LP</td>
+                <td class="actions">
+                    <button onclick="editarServicio('LP')">Editar</button>
+                    <button onclick="confirmDeleteServicio()">Eliminar</button>
+                    <button>Informe</button>
+                    <button>Parte Diario</button>
+                </td>
+            </tr>
+
+            <!-- Servicio 4 -->
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>4</td>
+                <td>Pluspetrol</td>
+                <td>Ana Martinez</td>
+                <td>1004</td>
+                <td>Proyecto Fortín de Piedra</td>
+                <td>Obra D</td>
+                <td>2024-02-15</td>
+                <td>RX</td>
+                <td class="actions">
+                    <button onclick="editarServicio('RX')">Editar</button>
+                    <button onclick="confirmDeleteServicio()">Eliminar</button>
+                    <button>Informe</button>
+                    <button>Parte Diario</button>
+                </td>
+            </tr>
+
+            <!-- Servicio 5 -->
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>5</td>
+                <td>Capex</td>
+                <td>Luis Fernandez</td>
+                <td>1005</td>
+                <td>Gasoducto Sierras Blancas</td>
+                <td>Obra E</td>
+                <td>2024-02-20</td>
+                <td>LP</td>
+                <td class="actions">
+                    <button onclick="editarServicio('LP')">Editar</button>
+                    <button onclick="confirmDeleteServicio()">Eliminar</button>
+                    <button>Informe</button>
+                    <button>Parte Diario</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

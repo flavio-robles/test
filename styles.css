@@ -45,9 +45,9 @@ button {
 	margin-right: 5px; /* Espacio entre botones */
 }
 
-	button:hover {
-		background-color: #0056b3;
-	}
+button:hover {
+	background-color: #0056b3;
+}
 
 /* Tabla de Detalles */
 table {
@@ -79,10 +79,10 @@ table input {
 	gap: 5px;
 }
 
-	.soldadores input {
-		max-width: 50px;
-		flex: 1;
-	}
+.soldadores input {
+	max-width: 50px;
+	flex: 1;
+}
 
 /* Login */
 .login-container {
@@ -95,9 +95,9 @@ table input {
 	text-align: center;
 }
 
-	.login-container input {
-		width: calc(100% - 12px);
-	}
+.login-container input {
+	width: calc(100% - 12px);
+}
 
 /* Estilos para enlaces */
 a {
@@ -107,15 +107,15 @@ a {
 	text-decoration: none;
 }
 
-	a:hover {
-		text-decoration: underline;
-	}
+a:hover {
+	text-decoration: underline;
+}
 
 /* Estilos para los botones de acciones */
 .actions {
 	white-space: nowrap; /* Evita que los botones se coloquen en varias líneas */
 }
 
-	.actions button {
-		margin-right: 5px; /* Espacio entre botones */
-	}
+.actions button {
+	margin-right: 5px; /* Espacio entre botones */
+}

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargar Datos Tecnicos de Servicio: Líquidos Penetrantes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Cargar Datos Tecnicos de Servicio: Líquidos Penetrantes</h1>
+    <form>
+        <!-- Sección: INFORME DE LIQUIDOS PENETRANTES -->
+        <fieldset>
+            <legend>INFORME DE LIQUIDOS PENETRANTES</legend>
+            <div>
+                <label>NroRegistro:</label>
+                <input type="text">
+                <label>FechaInspeccion:</label>
+                <input type="date">
+            </div>
+        </fieldset>
+
+        <!-- Sección: DATOS GENERALES -->
+        <fieldset>
+            <legend>DATOS GENERALES</legend>
+            <div>
+                <label>NroPedido (Cliente/Proyecto/Obra/Planta):</label>
+                <input type="text">
+            </div>
+            <div>
+                <label>NroOrden:</label>
+                <input type="text">
+                <label>NormaInspeccion:</label>
+                <select>
+                    <option>Norma A</option>
+                    <option>Norma B</option>
+                    <option>Norma C</option>
+                </select>
+            </div>
+            <div>
+                <label>NroRegistroKU:</label>
+                <input type="text">
+                <label>NormaEvaluacion:</label>
+                <select>
+                    <option>Norma A</option>
+                    <option>Norma B</option>
+                    <option>Norma C</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <!-- Sección: PARÁMETROS DEL ENSAYO -->
+        <fieldset>
+            <legend>PARÁMETROS DEL ENSAYO</legend>
+            <div>
+                <label>Proceso:</label>
+                <label>Soldadura:</label>
+                <input type="checkbox">
+                <label>Mecanizado:</label>
+                <input type="checkbox">
+                <label>Fundido:</label>
+                <input type="checkbox">
+                <label>Forjado:</label>
+                <input type="checkbox">
+                <label>Esmerilado:</label>
+                <input type="checkbox">
+                <label>Rectificado:</label>
+                <input type="checkbox">
+            </div>
+            <div>
+                <label>MarcaProductosUtilizados:</label>
+                <select>
+                    <option>MAGNAFLUX</option>
+                </select>
+                <label>Material:</label>
+                <select>
+                    <option>ACERO AL CARBONO</option>
+                </select>
+            </div>
+            <div>
+                <label>Penetrantes:</label>
+                <select>
+                    <option>SKL</option>
+                    <option>WP</option>
+                </select>
+                <label>TipoPenetrante:</label>
+                <select>
+                    <option>REMOVIBLE CON AGUA</option>
+                </select>
+                <label>Certificados:</label>
+                <input type="checkbox">
+            </div>
+            <div>
+                <label>TipoPigmento:</label>
+                <label>Color:</label>
+                <input type="checkbox">
+                <label>Fluorescente:</label>
+                <input type="checkbox">
+                <label>SensDual:</label>
+                <input type="checkbox">
+            </div>
+            <div>
+                <label>BajoContenidoAzufre:</label>
+                <input type="checkbox">
+                <label>BajoContenidoHalógenos:</label>
+                <input type="checkbox">
+            </div>
+        </fieldset>
+
+        <!-- Sección: DESARROLLO DEL MÉTODO - PREPARACION DE LA SUPERFICIE -->
+        <fieldset>
+            <legend>DESARROLLO DEL MÉTODO - PREPARACION DE LA SUPERFICIE</legend>
+            <div>
+                <label>TerminacionSuperficial:</label>
+                <select>
+                    <option>CEPILLADA</option>
+                </select>
+                <label>AgenteLimpiador:</label>
+                <select>
+                    <option>SOLVENTE</option>
+                </select>
+                <label>Tipo:</label>
+                <select>
+                    <option>COMERCIAL</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <!-- Sección: SECADO -->
+        <fieldset>
+            <legend>SECADO</legend>
+            <div>
+                <label>MetodoSecado:</label>
+                <label>EvaporacionNormal:</label>
+                <input type="checkbox">
+                <label>AireCalienteReferencia:</label>
+                <input type="checkbox">
+            </div>
+            <div>
+                <label>TiempoSecado:</label>
+                <input type="number">
+                <label>Unidad:</label>
+                <select>
+                    <option selected>MIN</option>
+                    <option>HS</option>
+                    <option>SEG</option>
+                </select>
+                <label>Otros:</label>
+                <input type="text">
+            </div>
+        </fieldset>
+
+        <!-- Sección: APLICACIÓN DEL PENETRANTE -->
+        <fieldset>
+            <legend>APLICACIÓN DEL PENETRANTE</legend>
+            <div>
+                <label>Metodo:</label>
+                <label>Inmersion:</label>
+                <input type="checkbox">
+                <label>Aspersion:</label>
+                <input type="checkbox">
+                <label>ConPincel:</label>
+                <input type="checkbox">
+                <label>Aerosol:</label>
+                <input type="checkbox">
+            </div>
+            <div>
+                <label>TiempoPenetracion:</label>
+                <input type="number">
+                <label>Unidad:</label>
+                <select>
+                    <option selected>MIN</option>
+                    <option>HS</option>
+                    <option>SEG</option>
+                </select>
+            </div>
+            <div>
+                <label>RangoDesdeTemperaturaEnsayo:</label>
+                <input type="number">
+                <label>Unidad:</label>
+                <select>
+                    <option selected>°C</option>
+                    <option>°F</option>
+                    <option>K</option>
+                </select>
+                <label>RangoHastaTemperaturaEnsayo:</label>
+                <input type="number">
+                <label>Unidad:</label>
+                <select>
+                    <option selected>°C</option>
+                    <option>°F</option>
+                    <option>K</option>
+                </select>
+            </div>
+            <div>
+                <label>TEMPERATURA LOGRADA POR:</label>
+                <label>Enfriamiento:</label>
+                <input type="checkbox">
+                <label>Calentamiento:</label>
+                <input type="checkbox">
+                <label>MedioAmbiente:</label>
+                <input type="checkbox">
+            </div>
+            <div>
+                <label>CalifDeProcedimiento:</label>
+                <input type="checkbox">
+                <label>Otros:</label>
+                <input type="text">
+            </div>
+        </fieldset>
+
+        <!-- Sección: PENETRANTES REMOVIBLES CON SOLVENTES N/A -->
+        <fieldset>
+            <legend>PENETRANTES REMOVIBLES CON SOLVENTES N/A</legend>
+            <div>
+                <label>REMOCIÓN POR:</label>
+                <label>PapelesHumedecidos:</label>
+                <input type="checkbox">
+                <label>TraposHumedecidos:</label>
+                <input type="checkbox">
+            </div>
+        </fieldset>
+
+        <!-- Sección: REMOCIÓN DEL EXCESO DE PENETRANTE -->
+        <fieldset>
+            <legend>REMOCIÓN DEL EXCESO DE PENETRANTE</legend>
+            <div>
+                <label>PenetranteLavableConH2O:</label>
+                <input type="checkbox">
+                <label>PresionAgua:</label>
+                <input type="text">
+            </div>
+            <div>
+                <label>RangoDesdeTemperaturaAgua:</label>
+                <input type="number">
+                <label>Unidad:</label>
+                <select>
+                    <option selected>°C</option>
+                    <option>°F</option>
+                    <option>K</option>
+                </select>
+                <label>RangoHastaTemperaturaAgua:</label>
+                <input type="number">
+                <label>Unidad:</label>
+                <select>
+                    <option selected>°C</option>
+                    <option>°F</option>
+                    <option>K</option>
+                </select>
+            </div>
+            <div>
+                <label>RemocionConPapelesOTrapos:</label>
+                <input type="checkbox">
+            </div>
+        </fieldset>
+
+        <!-- Sección: SECADO -->
+        <fieldset>
+            <legend>SECADO</legend>
+            <div>
+                <label>MÉTODO DE SECADO:</label>
+                <label>MaterialesSecantes:</label>
+                <input type="checkbox">
+                <label>EvaporacionNormal:</label>
+                <input type="checkbox">
+                <label>AireForzado:</label>
+                <input type="checkbox">
+                <label>FrotacionConPañoSeco:</label>
+                <input type="checkbox">
+            </div>
+            <div>
+                <label>TipoSecado:</label>
+                <input type="text">
+            </div>
+        </fieldset>
+
+        <!-- Sección: REVELADOR -->
+        <fieldset>
+            <legend>REVELADOR</legend>
+            <div>
+                <label>Revelador:</label>
+                <input type="text">
+            </div>
+            <div>
+                <label>MÉTODO:</label>
+                <label>Inmersion:</label>
+                <input type="checkbox">
+                <label>Aspersion:</label>
+                <input type="checkbox">
+                <label>ConPincel:</label>
+                <input type="checkbox">
+                <label>Aerosol:</label>
+                <input type="checkbox">
+            </div>
+            <div>
+                <label>ReveladorSeco:</label>
+                <input type="checkbox">
+            </div>
+            <div>
+                <label>TIPO DE SOLUCIÓN:</label>
+                <label>Solvente:</label>
+                <input type="checkbox">
+                <label>Agua:</label>
+                <input type="checkbox">
+            </div>
+            <div>
+                <label>TiempoRevelado:</label>
+                <input type="number">
+                <label>Unidad:</label>
+                <select>
+                    <option selected>MIN</option>
+                    <option>HS</option>
+                    <option>SEG</option>
+                </select>
+            </div>
+            <div>
+                <label>ReveladorHumedo:</label>
+                <input type="checkbox">
+            </div>
+        </fieldset>
+
+        <!-- Sección: SECADO -->
+        <fieldset>
+            <legend>SECADO</legend>
+            <div>
+                <label>MÉTODO DE SECADO:</label>
+                <label>MatarialesSecantes:</label>
+                <input type="checkbox">
+                <label>EvaporacionNormal:</label>
+                <input type="checkbox">
+                <label>AireCaliente:</label>
+                <input type="checkbox">
+                <label>FrotacionConPañoSeco:</label>
+                <input type="checkbox">
+            </div>
+            <div>
+                <label>Iluminacion:</label>
+                <input type="text">
+            </div>
+        </fieldset>
+
+        <!-- Sección: CONCLUSIONES DEL ENSAYO -->
+        <fieldset>
+            <legend>CONCLUSIONES DEL ENSAYO</legend>
+            <table>
+                <tr>
+                    <th>Costura</th>
+                    <th>Diametro</th>
+                    <th>OK_o_RZ</th>
+                    <th>Cuño</th>
+                    <th>Detalles</th>
+                    <th>IndicacionesDefectos</th>
+                </tr>
+                <tr>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <!-- Sección: FIRMAS -->
+        <fieldset>
+            <legend>FIRMAS</legend>
+            <div>
+                <label>Interprete:</label>
+                <select>
+                    <option>Andres Molina</option>
+                    <option>Felipe Torres</option>
+                </select>
+                <label>InspectorVB:</label>
+                <select>
+                    <option>Alfonso Re</option>
+                    <option>Julio Reyes</option>
+                </select>
+            </div>
+            <div>
+                <label>FechaInspeccionVB:</label>
+                <input type="date">
+                <label>ClienteVB:</label>
+                <select>
+                    <option>Lucas Juarez</option>
+                </select>
+                <label>FechaClienteVB:</label>
+                <input type="date">
+            </div>
+        </fieldset>
+
+        <button type="submit">Guardar</button>
+    </form>
+</body>
+</html>
