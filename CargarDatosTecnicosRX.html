@@ -9,7 +9,35 @@
 <body>
 	<h1>Cargar Datos T&eacute;cnicos de Servicio: Gammagraf&iacute;a</h1>
 	<form>
-		<!-- Secci&oacute;n: DATOS GENERALES -->
+		<fieldset>
+			<legend>Pedido END</legend>
+			<label for="pedido-end">Pedido END:</label>
+			<select id="pedido-end" onchange="actualizarDatosPedido()">
+				<option value="">Seleccione...</option>
+				<option value="YPF">YPF - Vaca Muerta - AR4.PMO-END.Pr.10</option>
+				<option value="Tecpetrol">Tecpetrol - Sierras Blancas - F-01.SIEBLAN-CO</option>
+			</select>
+			<div>
+				<div>
+					<label>Cliente:</label> <span id="cliente"></span>
+				</div>
+				<div>
+					<label>Proyecto:</label> <span id="proyecto"></span>
+				</div>
+				<div>
+					<label>Planta:</label> <span id="planta"></span>
+				</div>
+				<div>
+					<label>Obra:</label> <span id="obra"></span>
+				</div>
+				<div>
+					<label>Formulario Cliente:</label> <span id="form-cliente"></span>
+				</div>
+				<div>
+					<label>Fecha:</label> <span id="fecha"></span>
+				</div>
+			</div>
+		</fieldset>
 		<fieldset>
 			<legend>DATOS GENERALES</legend>
 			<div>
@@ -18,8 +46,6 @@
 				<label>Fecha:</label>
 				<input type="date">
 				<label>NroInforme:</label>
-				<input type="text">
-				<label>NroPedido (Cliente/Proyecto/Obra/Planta):</label>
 				<input type="text">
 			</div>
 			<div>
@@ -266,5 +292,29 @@
 
 		<button type="submit">Guardar</button>
 	</form>
-</body>
-</html>
+	<script>
+		function actualizarDatosPedido() {
+			const pedido = document.getElementById('pedido-end').value;
+			const datos = {
+				'YPF': { cliente: 'YPF', proyecto: 'Vaca Muerta', form: 'AR4.PMO-END.Pr.10', fecha: '10/01/2025', proyecto: 'Proyecto J', obra: 'Obra MM' },
+				'Tecpetrol': { cliente: 'Tecpetrol', proyecto: 'Sierras Blancas', form: 'F-01.SIEBLAN-CO', fecha: '22/01/2025', proyecto: 'Proyecto K', obra: 'Obra TT' },
+			};
+			if (pedido && datos[pedido]) {
+				document.getElementById('cliente').textContent = datos[pedido].cliente;
+				document.getElementById('proyecto').textContent = datos[pedido].proyecto;
+				document.getElementById('form-cliente').textContent = datos[pedido].form;
+				document.getElementById('fecha').textContent = datos[pedido].fecha;
+				document.getElementById('proyecto').textContent = datos[pedido].proyecto;
+				document.getElementById('obra').textContent = datos[pedido].obra;
+			} else {
+				document.getElementById('cliente').textContent = '';
+				document.getElementById('proyecto').textContent = '';
+				document.getElementById('form-cliente').textContent = '';
+				document.getElementById('fecha').textContent = '';
+				document.getElementById('proyecto').textContent = '';
+				document.getElementById('obra').textContent = '';
+			}
+		}
+	</script>
+</body >
+</html >
